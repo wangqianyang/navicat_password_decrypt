@@ -220,6 +220,14 @@ public class MainIndexFrame {
             for (Map.Entry<String, Map<String, String>> valueMap : map.entrySet()) {
                 Map<String, String> resultMap = valueMap.getValue();
                 String password = decodeNcx.decode(resultMap.getOrDefault("Password", ""));
+                /*
+                stringBuilder.append(resultMap.get("ConnType")).append("|")
+                        .append(resultMap.get("ConnectionName")).append("|")
+                        .append(resultMap.get("Host")).append("|")
+                        .append(resultMap.get("Port")).append("|")
+                        .append(resultMap.get("UserName")).append("|")
+                        .append(password).append("\n");
+                */
                 stringBuilder.append(resultMap.get("Host")).append("|").append(resultMap.get("Port")).append("|")
                         .append(resultMap.get("UserName")).append("|").append(resultMap.get("ConnType")).append(" = ")
                         .append(password).append("\n");
